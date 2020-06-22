@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Adds convience Wrappers to NPOI</Description>
+    <PackageId>Cap.CoreExcel</PackageId>
+    <Authors>Jan Ruhlaender</Authors>
+    <Product>CoreExcel</Product>
+    <Copyright>©2020 Jan Ruhlaender</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cap.Core" Version="3.5.1" />
+    <PackageReference Include="NPOI" Version="2.5.1" />
+  </ItemGroup>
+
+</Project>
