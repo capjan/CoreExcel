@@ -2,7 +2,7 @@
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 
-namespace ExcelQuery
+namespace CoreExcel
 {
     public class ExcelSheet
     {

@@ -2,7 +2,7 @@
 using System.Linq;
 using NPOI.SS.UserModel;
 
-namespace ExcelQuery
+namespace CoreExcel
 {
     public class ExcelRow
     {

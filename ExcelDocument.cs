@@ -4,7 +4,7 @@ using System.IO;
 using Core.IO.Impl;
 using NPOI.XSSF.UserModel;
 
-namespace ExcelQuery
+namespace CoreExcel
 {
     public class ExcelDocument: IDisposable
     {

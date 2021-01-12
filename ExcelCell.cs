@@ -1,6 +1,6 @@
 ﻿using NPOI.SS.UserModel;
 
-namespace ExcelQuery
+namespace CoreExcel
 {
     public class ExcelCell
     {
@@ -8,7 +8,6 @@ namespace ExcelQuery
 
         public string StringValue => _wrappedCell.StringCellValue;
         
-
         public ExcelCell(ICell wrappedCell)
         {
             _wrappedCell = wrappedCell;
