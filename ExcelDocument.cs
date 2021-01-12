@@ -30,6 +30,13 @@ namespace ExcelQuery
             _workbook = new XSSFWorkbook(fi);
         }
 
+        public ExcelDocument(Stream stream)
+        {
+            _isShadowCopy        = false;
+            _filePath            = null;
+            _workbook            = new XSSFWorkbook(stream);
+        }
+
         private string InitFilePath(string filePath)
         {
             if (!_isShadowCopy) return filePath;
