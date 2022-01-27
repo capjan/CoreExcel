@@ -7,6 +7,8 @@ namespace CoreExcel
         private readonly ICell _wrappedCell;
 
         public string StringValue => _wrappedCell.StringCellValue;
+
+        public int ColumnIndex => _wrappedCell.ColumnIndex;
         
         public ExcelCell(ICell wrappedCell)
         {
