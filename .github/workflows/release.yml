@@ -1,0 +1,24 @@
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET 6 SDK
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+      - name: Restore Dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --no-restore
+      - name: Run Unit Tests
+        run: dotnet test --no-build --verbosity normal
+      - name: Create NuGet Package
+        run: dotnet pack -c Release
+      - name: Deploy to Public NuGet
+        run: dotnet nuget push ./bin/Release/*.nupkg --api-key ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
