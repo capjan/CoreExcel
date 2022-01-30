@@ -19,8 +19,8 @@ jobs:
       - name: Restore Dependencies
         run: dotnet restore
       - name: Build
-        run: dotnet build --no-restore
+        run: dotnet build -c Release --no-restore
       - name: Run Unit Tests
-        run: dotnet test --no-build --verbosity normal
+        run: dotnet test --verbosity normal
       - name: Deploy to Public NuGet
         run: dotnet nuget push ./bin/Release/*.nupkg --api-key ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
