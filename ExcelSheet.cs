@@ -17,7 +17,10 @@ namespace CoreExcel
             get
             {
                 foreach (XSSFRow row in _wrappedSheet)
+                {
+                    if (row.Cells.Count == 0) continue;
                     yield return new ExcelRow(row);
+                }
             }
         }
 
